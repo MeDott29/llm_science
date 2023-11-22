@@ -107,10 +107,10 @@ In its current form, we are including a predefinde answer in our messages to GPT
 
 ## File/Function Descriptions
 ### `improved_retrieval.py`
-Data Loading: You've loaded a CSV file into a pandas DataFrame and selected a single row for processing.
-Test Item Creation: You've created a test item by concatenating the prompt and all the options (A, B, C, D, E) along with the answer from the selected row.
-Search Term Extraction: You've used the OpenAI GPT-3.5-turbo model to generate the top three search terms from the test item.
-Data Cleaning: You've created a function to clean the first search term by removing everything inside parentheses, all non-alphabetical characters except spaces, and spaces from the end of the string.
-Wikipedia Search: You've created a function to search Wikipedia for the cleaned search term and retrieve the content of the first two pages.
-Paragraph Extraction: You've created a function to find paragraphs in the Wikipedia content that contain the second and third search terms.
-The script then prints out the paragraphs that contain both search terms.
+Data Loading: The script begins by loading a CSV file into a pandas DataFrame, a data structure that's ideal for data manipulation and analysis. It then selects a single row from this DataFrame for further processing.
+Test Item Creation: The script constructs a test item by combining various elements from the selected row. This includes the prompt and all the options (A, B, C, D, E), as well as the answer.
+Search Term Extraction: The script leverages the capabilities of the OpenAI GPT-3.5-turbo model to generate the top three search terms from the test item. This is a crucial step as it determines the keywords that will be used for the subsequent information retrieval process.
+Data Cleaning: The script includes a function that cleans the first search term. This involves removing everything inside parentheses, all non-alphabetical characters except spaces, and spaces from the end of the string. This step ensures that the search term is in a suitable format for the next stage.
+Wikipedia Search: The script then searches Wikipedia using the cleaned search term and retrieves the content of the first two pages. This is done using a function that interacts with the Wikipedia API.
+Paragraph Extraction: Finally, the script includes a function that finds paragraphs in the Wikipedia content that contain the second and third search terms. This is a key step in pinpointing the most relevant information related to the test item.
+The script concludes by printing out the paragraphs that contain both search terms, providing a concise summary of the most relevant information.
