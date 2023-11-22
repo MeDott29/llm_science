@@ -1,3 +1,4 @@
+### 2023/11/22
 Work Log
 ---
 
@@ -5,14 +6,15 @@ I want to learn these libraries by utilizing them in my projects
 import pytest
 import pydantic
 import fastapi 
-import openai
-import asyncio
-import tenacity
-import redis
-import logging
+import openai #high prio
+import asyncio #high prio
+import tenacity #high prio
+import chroma
+import logging #high prio
 
 Yesterday I learned it was important to break my task up into small goals in service of achieving an objective.
 Yesterday the objective was getting an emulation of human techniques for MCQ answering.  [Improved Retrieval with LLMs](/home/m/llm_science/improved_retrieval.ipynb)
+### 2023/11/21
 ## Thoughts
 This is at once the most mundane, plain Jane bullshit and the coolest thing I've ever done in my life. The sweet spot.
 ### Notes
@@ -102,3 +104,13 @@ In its current form, we are including a predefinde answer in our messages to GPT
 7. **Performance Optimization**: Look for ways to optimize the performance of the system, such as parallel processing or caching search results.
 
 8. **Documentation**: Document the code and the system architecture for code maintenance and for other team members who might join the project.
+
+## File/Function Descriptions
+### `improved_retrieval.py`
+Data Loading: You've loaded a CSV file into a pandas DataFrame and selected a single row for processing.
+Test Item Creation: You've created a test item by concatenating the prompt and all the options (A, B, C, D, E) along with the answer from the selected row.
+Search Term Extraction: You've used the OpenAI GPT-3.5-turbo model to generate the top three search terms from the test item.
+Data Cleaning: You've created a function to clean the first search term by removing everything inside parentheses, all non-alphabetical characters except spaces, and spaces from the end of the string.
+Wikipedia Search: You've created a function to search Wikipedia for the cleaned search term and retrieve the content of the first two pages.
+Paragraph Extraction: You've created a function to find paragraphs in the Wikipedia content that contain the second and third search terms.
+The script then prints out the paragraphs that contain both search terms.
