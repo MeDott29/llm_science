@@ -2,7 +2,8 @@
 Work Log
 ---
 
-I want to learn these libraries by utilizing them in my projects
+I want to learn these libraries by utilizing them in my projects:
+```
 import pytest
 import pydantic
 import fastapi 
@@ -11,7 +12,7 @@ import asyncio #high prio
 import tenacity #high prio
 import chroma
 import logging #high prio
-
+```
 Yesterday I learned it was important to break my task up into small goals in service of achieving an objective.
 Yesterday the objective was getting an emulation of human techniques for MCQ answering.  [Improved Retrieval with LLMs](/home/m/llm_science/improved_retrieval.ipynb)
 ### 2023/11/21
